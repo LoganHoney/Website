@@ -21,7 +21,7 @@ header {
     position:absolute;
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
-    height: 300px; /* Full height */
+    height: 250px; /* Full height */
     background-color: #000000; /* Sidebar background color */
     padding-top: 20px; /* Padding at the top */
 }
