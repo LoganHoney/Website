@@ -47,11 +47,10 @@ header {
 }
 
 .content {
-    margin-left:5%; 
-    margin-right:5%;
     padding: 20px; /* Padding for the content */
     background-color: #000000;
     color:white;
+    
 }
 
 .highlight {
