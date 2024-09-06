@@ -93,7 +93,7 @@ header {
 }
 #education ul li a {
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
 }
 
 #education ul li a:hover { /* hover for YT links*/
@@ -102,7 +102,7 @@ header {
 
 #contact p a {
     text-decoration: none;
-    color:#000000;
+    color:#FFFFFF;
     font-weight: bold;
 }
 
