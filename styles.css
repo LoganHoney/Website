@@ -17,34 +17,30 @@ header {
 
 
 .sidebar {
-    width: 200px; /* Width of the sidebar */
-    position:absolute;
+	position: absolute;
     top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    height: 220px; /* Full height */
+    right: 0; /* Align to the left */
     background-color: #000000; /* Sidebar background color */
-    padding-top: 20px; /* Padding at the top */
-}
-
-.sidebar ul {
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
+	display: flex;
 }
 
-.sidebar ul li {
-    padding: 15px; /* Padding for each list item */
+.sidebar li {
+    margin-right: 15px; /* Padding for each list item */
 }
 
-.sidebar ul li a {
+.sidebar a {
     color: white; /* Link color */
     text-decoration: none; /* Remove underline */
-    display: block; /* Make the link fill the list item */
+    
 }
 
-.sidebar ul li a:hover {
+.sidebar a:hover {
    font-weight: bold;
    color: #ffda0a
 }
+
 
 .content {
     padding: 20px; /* Padding for the content */
