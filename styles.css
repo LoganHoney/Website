@@ -41,12 +41,11 @@ header {
    color: #ffda0a
 }
 
-
 .content {
+    margin-left:5%; 
+    margin-right:5%;
     padding: 20px; /* Padding for the content */
-    background-color: #000000;
-    color:white;
-    
+    background-color: white;
 }
 
 .highlight {
@@ -55,28 +54,28 @@ header {
 }
 
 #about {
-    border: 2px solid #FFFFFF;
+    border: 2px solid #000000;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
 }
 
 #education {
-    border: 2px solid #FFFFFF;
+    border: 2px solid #000000;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
 }
 
 #contact {
-    border: 2px solid #FFFFFF;
+    border: 2px solid #000000;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
 }
 
 #portfolio {
-    border: 2px solid #FFFFFF;
+    border: 2px solid #000000;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
@@ -88,7 +87,7 @@ header {
 }
 #education ul li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: black;
 }
 
 #education ul li a:hover { /* hover for YT links*/
@@ -97,7 +96,7 @@ header {
 
 #contact p a {
     text-decoration: none;
-    color:#FFFFFF;
+    color:#000000;
     font-weight: bold;
 }
 
@@ -110,4 +109,3 @@ footer {
     bottom: 0; /* Align to the bottom */
     width: 100%; /* Full width */
 }
-
