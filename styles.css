@@ -149,7 +149,7 @@ footer {
     display: block;
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: 10px;
     width: 30px;
     height: 30px;
     border: none;
