@@ -150,7 +150,7 @@ footer {
     display: block;
 	position: fixed;
 	top: 0;
-	right: 5%;
+	right: 2%;
     width: 30px;
     height: 30px;
     border: none;
@@ -204,6 +204,7 @@ footer {
     position: absolute;
     top: 15px;
     left: -30px;  
+    padding: 15px;
   }
 
   .hamburger-menu.active {
