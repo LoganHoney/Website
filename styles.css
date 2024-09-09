@@ -204,9 +204,11 @@ footer {
     position: absolute;
     top: 15px;
     left: -40px;  
-    padding: 30px;
   }
 
+  .hamburger-menu li {
+    padding: 10px;
+    }
   .hamburger-menu.active {
     display: block;
 	width:80px;
