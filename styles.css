@@ -150,7 +150,7 @@ footer {
     display: block;
 	position: fixed;
 	top: 0;
-	right: 2%;
+	right: 3%;
     width: 30px;
     height: 30px;
     border: none;
@@ -203,7 +203,7 @@ footer {
 	list-style-type: none;
     position: absolute;
     top: 15px;
-    left: -30px;  
+    left: -40px;  
     padding: 15px;
   }
 
