@@ -5,49 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honey Logan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+	<!--<iframe src="http://your-jupyter-server/notebook/path" width="800" height="600"></iframe>-->
 </head>
 <body>
     <header>
 		
 		<h1> Hi. I'm <span class="highlight">Logan</span>. </h1>
-		<p> Python | SQL | Web Development </p>
-	
-		
+		<p> Innovate | Automate | Elevate </p>
+	<nav>
+		<ul class="sidebar">
+				<li> <a rel = "html" href="about.html"> About Me</a> </li>
+				<li> <a rel = "html" href="education.html">Education</a> </li>
+				<li> <a rel = "html" href="portfolio.html">Portfolio</a> </li>
+		</ul>
 		 
-			<ul class="sidebar">
-				<li> <a href="#about"> About Me</a> </li>
-				<li> <a href="#contact">Contact</a> </li>
-				<li> <a href="#education">Education</a> </li>
-				<li> <a href="#portfolio">Portfolio</a> </li>
-			</ul>
+			
+		<button class="hamburger-button">
+			<span></span>
 		
+			<ul class="hamburger-menu">
+				<li> <a rel = "html" href="about.html"> About Me</a> </li>
+				<li> <a rel = "html" href="education.html">Education</a> </li>
+				<li> <a rel = "html" href="portfolio.html">Portfolio</a> </li>
+			</ul>
+		</button>	
+	</nav>
 
     </header>
     
 
-
+	<main>
     <div class="content">
-        <section id ="about">
-            <h2> About Me </h2>
-            <h4> "If we are not moving forward, we are moving backwards." </h4>
-            <p> This quote is one that has stuck with me throughout my career. It isn't enough to just maintain status quo, we must continuously be working to improve ourselves. Improving our soft and hard skills also benefits those around us. I decided to take my career seriously in Fall 2023. I have always had an interest in Tech and decided to pursue a career in that field. I realized I needed to learn skills to bring to the table. </p>
+        <section id ="innovate">
+			<h2> <span class = "highlight">Innovate</span> <i style = "font-size: 15px;">(verb): to introduce new or improved ideas, methods, or products.</i> </h2>
+			<p style="grid-column: 1;"> The lightbulb went through many itterations to become to the modern lightbulb as we know it today. It didn't remain satisfactory to have a lightbulb that just produced light. We now have lightbulbs that are safer and more efficient because that status quo was constantly being <i> innovated</i>  </p> 
+			<img src="images/lightbulbevo.jpg" alt="Lightbulb Evolution" width="500" height="300" style="grid-column: 2;" >
         </section>
         
-        <section id="education">
-            <h2> My Education </h2>
-            <h4> St. Petersburg College (2017-2019)</h4>
-            <p> I earned a baseline AA from SPC. I didn't know what career path to take so a generic degree seemed to be the best option at the time!</p>
-            <h4> Pasco Hernando State College (2023 - Present)</h4>
-            <p> After a 4 year break from school and gaining some work experience. I decided to start pursuing my career in tech by enrolling in PHSC's Computer Programming and Analysis AS degree. In this program I've learned the basics of OOP, SQL, and Web Development </p>
-            <h4> YouTube </h4>
-            <p> Yep, you read that right, YouTube! It amazes me how many resources are at your fingertips. School projects are fun and all but there is nothing like experimenting and learning something new from scratch through personal projects! <br>
-            Here are a few YouTube channels that I believe provide outstanding content for learning new skills:</p>
-            <ul>
-                <li> <a href="https://www.youtube.com/@NetworkChuck"> Network Chuck</a> - Netwroking, SQL, Python, Cyber Security, HTML.</li>
-                <li> <a href="https://www.youtube.com/@programmingwithmosh"> Programming with Mosh</a> - Pyhton.</li>
-              <!--  <li> <a href="https://www.youtube.com/@BroCodez"> Bro Code</a> - Python, HTML. </li>-->
-                <li> <a href="https://www.youtube.com/@GiraffeAcademy"> Giraffe Academy</a> - SQL, Database Structures, Data Manipulation. </li>
-            </ul>
+        <section id="automate">
+            <h2> <span class = "highlight">Automate</span> <i style = "font-size: 15px;">(verb): to use machines and computers instead of people to do a job or task.</i> </h2>
+			<p style="grid-column: 1;"> The lightbulb went through many itterations to become to the modern lightbulb as we know it today. It didn't remain satisfactory to have a lightbulb that just produced light. We now have lightbulbs that are safer and more efficient because that status quo was constantly being <i> innovated</i>  </p> 
+			<img src="images/automate.jpg" alt="automate" width="500" height="300" style="grid-column: 2;" >
+            
         </section>
         
         <section id="portfolio">
@@ -62,9 +61,12 @@
             <p>Email: <a href="mailto:honey.logan.t@gmail.com">honey.logan.t@gmail.com</a></p>
         </section>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Logan Honey. All rights reserved.</p>
-    </footer>
+	</main>
+	
+	<script src="hamburger.js"></script>
+	
 </body>
+<footer>
+        <p>&copy; 2024 Logan Honey. All rights reserved.</p>
+</footer>
 </html>

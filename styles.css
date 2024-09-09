@@ -1,29 +1,46 @@
-body {
-    margin: 0;
+body{
+  
     font-family: Arial, sans-serif;
+	margin:0;
 }
 
-header {
+header{
     background-color: #000000; /* Header background color */
-    color: white; /* Header text color */
-    padding: 20px; /* Padding for header */
+    color: #FFFFFF; /* Header text color */
     text-align: center; /* Center text */
     height: 100vh;
     display: flex; /* Use Flexbox */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
+	width: 100vw;
+
+
 }
 
+img {
+	border-radius: 25px;
+	margin: 20px;
+	
+}
+
+p {
+	font-size: 15px;
+}
+	
+main{
+	margin:0;
+}
 
 .sidebar {
 	position: absolute;
     top: 0; /* Align to the top */
-    right: 0; /* Align to the left */
+    right: 0; /* Align to the right */
     background-color: #000000; /* Sidebar background color */
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
 	display: flex;
+	
 }
 
 .sidebar li {
@@ -42,10 +59,11 @@ header {
 }
 
 .content {
-    margin-left:5%; 
-    margin-right:5%;
+	color: #FFFFFF;
     padding: 20px; /* Padding for the content */
-    background-color: white;
+    background-color: #000000;
+	width: 100vw;
+	
 }
 
 .highlight {
@@ -53,32 +71,40 @@ header {
     font-weight:bold;
 }
 
-#about {
-    border: 2px solid #000000;
+#innovate {
+    border: 2px solid #FFFFFF;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
+    display: grid; 
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	
+	
 }
 
-#education {
-    border: 2px solid #000000;
+#automate {
+    border: 2px solid #FFFFFF;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
+    display: grid; 
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
 }
 
 #contact {
-    border: 2px solid #000000;
+    border: 2px solid #FFFFFF;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 
 #portfolio {
-    border: 2px solid #000000;
+    border: 2px solid #FFFFFF;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 
 #education ul {
@@ -107,5 +133,95 @@ footer {
     color: white; /* Footer text color */
     position: relative; /* Position relative for footer */
     bottom: 0; /* Align to the bottom */
-    width: 100%; /* Full width */
+    width: 100vw; /* Full width */
 }
+
+/* Styling for the damn hamburger menu */
+.hamburger-button {
+  display: none;
+}
+
+
+
+/* Make it a hamburger menu on small screens */
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .hamburger-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-button span:before, .hamburger-button span:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-button span:before {
+    top: -8px;
+  }
+
+  .hamburger-button span:after {
+    top: 8px;
+  }
+
+  .hamburger-button.active span {
+    background-color: transparent;
+  }
+
+  .hamburger-button.active span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-button.active span:after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .hamburger-menu {
+    display: none;
+	list-style-type: none;
+    position: absolute;
+    top: 15px;
+    left: -30px;  
+  }
+
+  .hamburger-menu.active {
+    display: block;
+	width:80px;
+	padding: 15px;
+  }
+  
+  .sidebar {
+	display: none;
+}
+}
+
+
+
+.hamburger-menu a {
+    text-decoration: none; /* Remove underline */
+	font-weight: bold;
+   color: #ffda0a
+    
+}
+
