@@ -192,7 +192,7 @@ footer {
   }
 
   .hamburger-menu {
-    display: none;
+    display: block;
     list-style-type: none;
     position: absolute;
     top: 15px;
@@ -205,12 +205,12 @@ footer {
     
 
   .hamburger-menu li {
-    padding: 10px;
-    font-size: 15px;
+        padding: 10px;
+        font-size: 15px;
     }
   .hamburger-menu.active {
-    display: block;
-	width:80px;
+        display: block;
+	width:75px;
 	padding: 15px;
   }
   
