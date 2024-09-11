@@ -149,7 +149,6 @@ footer {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    overflow-x: hidden;
   }
 
   .hamburger-button span {
@@ -194,11 +193,16 @@ footer {
 
   .hamburger-menu {
     display: none;
-	list-style-type: none;
+    list-style-type: none;
     position: absolute;
     top: 15px;
     left: -40px;  
   }
+ .hamburger-menu a {
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    color: #ffffff;
+    
 
   .hamburger-menu li {
     padding: 10px;
@@ -216,10 +220,3 @@ footer {
 }
 
 
-
-.hamburger-menu a {
-    text-decoration: none; /* Remove underline */
-	font-weight: bold;
-   color: #ffffff;
-    
-}
