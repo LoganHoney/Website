@@ -74,9 +74,15 @@ main{
 
 #innovate {
     border: 2px solid #FFFFFF;
+    border-width: 75vw;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 20px;	
+    margin: 20px 20px;
+    display: grid; 
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	
+	
 }
 
 #automate {
@@ -84,6 +90,9 @@ main{
     border-radius: 10px;
     padding: 20px;
     margin: 20px 20px;
+    display: grid; 
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
 }
 
 #contact {
@@ -226,4 +235,3 @@ footer {
    color: #ffffff;
     
 }
-
