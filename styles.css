@@ -14,14 +14,14 @@ header{
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
-	width: 100vw;
+    width: 100vw;
 
 
 }
 
 img {
 	border-radius: 25px;
-	margin: 20px;
+	padding: 20px;
 	
 }
 
@@ -77,21 +77,13 @@ main{
     border-radius: 10px;
     padding: 20px;
     margin: 20px 20px;
-    display: grid; 
-	grid-template-columns: 2fr 1fr;
-	align-items: center;
-	
-	
 }
 
 #automate {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 20px;
-    display: grid; 
-	grid-template-columns: 2fr 1fr;
-	align-items: center;
+    margin: 20px 20px; 
 }
 
 #contact {
