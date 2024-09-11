@@ -221,6 +221,10 @@ footer {
   .sidebar {
 	display: none;
 }
+   img {
+	   width: 150px;
+	   height: 100px;
+   }
 }
 
 
