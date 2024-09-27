@@ -14,7 +14,7 @@ header{
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
-    width: 100vw;
+    
 
 
 }
@@ -64,7 +64,7 @@ main{
 	color: #FFFFFF;
     padding: 20px; /* Padding for the content */
     background-color: #000000;
-	width: 100vw;
+
 	
 }
 
@@ -121,7 +121,7 @@ footer {
     color: white; /* Footer text color */
     position: relative; /* Position relative for footer */
     bottom: 0; /* Align to the bottom */
-    width: 100vw; /* Full width */
+    
 }
 
 /* Styling for the damn hamburger menu */
