@@ -57,7 +57,7 @@ main{
 
 .sidebar a:hover {
    font-weight: bold;
-   color: #ffda0a
+   color: #03aee5;
 }
 
 .content {
@@ -69,7 +69,7 @@ main{
 }
 
 .highlight {
-    color:#ffda0a;
+    color:##03aee5;
     font-weight:bold;
 }
 
