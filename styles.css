@@ -60,19 +60,6 @@ main{
    color: #03aee5;
 }
 
-.content {
-    color: #FFFFFF;
-    background-color: #000000;
-    border: 2px solid #FFFFFF;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 20px;
-}
-
-
-	
-}
-
 .highlight {
     color:#03aee5;
     font-weight:bold;
@@ -89,14 +76,6 @@ main{
     padding: 20px;
     background-color: #f4f4f4; /* Light gray background */
     border: 1px solid #ccc; /* Border around columns */
-}
-
-.left {
-    background-color: #000000; /* Light blue background for left column */
-}
-
-.right {
-    background-color: #000000; /* Light pink background for right column */
 }
 
 
