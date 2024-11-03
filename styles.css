@@ -72,6 +72,12 @@ main{
     color:#03aee5;
     font-weight:bold;
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
 .column {
     flex: 1; /* Each column will take equal space */
     margin: 10px; /* Space between columns */
