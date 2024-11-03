@@ -70,14 +70,20 @@ main{
     justify-content: space-between;
     padding: 20px;
 }
+
 .column {
     flex: 1; /* Each column will take equal space */
-    margin: 10px; /* Space between columns */
-    padding: 20px;
-    background-color: #f4f4f4; /* Light gray background */
-    border: 1px solid #ccc; /* Border around columns */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
+.left {
+    background-color: #f0f0f0; /* Light gray background for left column */
+}
+
+.right {
+    background-color: #e0e0e0; /* Slightly darker gray for right column */
+}
 
 #education ul {
     list-style: none;
