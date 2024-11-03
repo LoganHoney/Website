@@ -93,11 +93,11 @@ main{
 }
 
 .left {
-    background-color: #FFFFFF; /* Light blue background for left column */
+    background-color: #000000; /* Light blue background for left column */
 }
 
 .right {
-    background-color: #FFFFFF; /* Light pink background for right column */
+    background-color: #000000; /* Light pink background for right column */
 }
 
 
