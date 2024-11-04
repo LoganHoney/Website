@@ -90,6 +90,8 @@ main{
     height: auto; /* Set the height of the image */
     border-radius: 50%; /* Make the image round */
     object-fit: cover; /* Ensure the image covers the area without distortion */
+    text-align: center;
+	
 }
 
 #education ul {
@@ -120,6 +122,7 @@ footer {
     bottom: 0; /* Align to the bottom */
     
 }
+/*OPTIMIZING FOR MOBILE*/
 @media (max-width: 768px) {
 	.TwoColumn{
 		display:none
