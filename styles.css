@@ -65,6 +65,10 @@ main{
     font-weight:bold;
 }
 
+.about{
+    text-align: center;
+}
+
 .TwoColumn{
     display: flex;
     justify-content: space-between;
@@ -90,7 +94,6 @@ main{
     height: auto; /* Set the height of the image */
     border-radius: 50%; /* Make the image round */
     object-fit: cover; /* Ensure the image covers the area without distortion */
-    text-align: center;
 	
 }
 
