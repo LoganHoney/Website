@@ -103,7 +103,6 @@ main{
 }
 
 #Elevate  {
-    background-color: rgba(26, 159, 193, 0.4); /*Theme Color background*/
     border: 1px solid #000000; /* black border */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside sections */
