@@ -94,7 +94,7 @@ main{
 	    height: auto; /* Set the height of the image */
 	    border-radius: 50%; /* Make the image round */
 	    object-fit: cover; /* Ensure the image covers the area without distortion */
-
+}
 #education ul {
     list-style: none;
 
@@ -134,6 +134,7 @@ footer {
 	    border-radius: 50%; /* Make the image round */
 	    object-fit: cover; /* Ensure the image covers the area without distortion */
 	}
+}
 @media (min-width: 768px) {
 	.Container{
 		display:none
