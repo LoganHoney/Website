@@ -123,7 +123,7 @@ main{
     font-weight:bold;
 }
 #contact {
-     margin: 20px 15px; /*above/below, left/righ*/
+     margin: 20px;
 }
 
 #contact p a {
