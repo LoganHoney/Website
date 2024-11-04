@@ -97,11 +97,11 @@ main{
 }
 
 #Elevate  {
-    background-color: rbg(3, 174, 229, 0.5); /*Theme Color background*/
+    background-color: rbga(3, 174, 229, 0.5); /*Theme Color background*/
     border: 1px solid #000000; /* black border */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside sections */
-    margin-bottom: 20px; /* Space between sections */
+    margin-bottom: 20px 15px; /* Space between sections */
 }
 	
 #education ul {
