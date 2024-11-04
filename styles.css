@@ -88,14 +88,7 @@ main{
 .right {
     background-color: #e0e0e0; /* Slightly darker gray for right column */
 }
-/* IMAGES FORMATTING */
-.Headshot {
-    width: 100px; /* Set the width of the image */
-    height: auto; /* Set the height of the image */
-    border-radius: 50%; /* Make the image round */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-	
-}
+
 
 #education ul {
     list-style: none;
@@ -130,11 +123,21 @@ footer {
 	.TwoColumn{
 		display:none
 	}
-}
+	.Headshot {
+	    width: 150px; /* Set the width of the image */
+	    height: auto; /* Set the height of the image */
+	    border-radius: 50%; /* Make the image round */
+	    object-fit: cover; /* Ensure the image covers the area without distortion */
+	}
 @media (min-width: 768px) {
 	.Container{
 		display:none
 	}
+	.Headshot {
+	    width: 300px; /* Set the width of the image */
+	    height: auto; /* Set the height of the image */
+	    border-radius: 50%; /* Make the image round */
+	    object-fit: cover; /* Ensure the image covers the area without distortion */
 }		
 
 
