@@ -113,6 +113,15 @@ footer {
     bottom: 0; /* Align to the bottom */
     
 }
-
+@media (max-width: 768px) {
+	.TwoColumn{
+		display:none
+	}
+}
+@media (min-width: 768px) {
+	.Container{
+		display:none
+	}
+}		
 
 
