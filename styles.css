@@ -121,6 +121,9 @@ main{
 #education ul li a:hover { /* hover for YT links*/
     font-weight:bold;
 }
+#contact {
+     margin: 20px 15px; /*above/below, left/righ*/
+}
 
 #contact p a {
     text-decoration: none;
