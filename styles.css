@@ -95,6 +95,15 @@ main{
 	    border-radius: 50%; /* Make the image round */
 	    object-fit: cover; /* Ensure the image covers the area without distortion */
 }
+
+#Elevate  {
+    background-color: rbg(3, 174, 229, 0.5); /*Theme Color background*/
+    border: 1px solid #000000; /* black border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside sections */
+    margin-bottom: 20px; /* Space between sections */
+}
+	
 #education ul {
     list-style: none;
 
