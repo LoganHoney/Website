@@ -84,6 +84,13 @@ main{
 .right {
     background-color: #e0e0e0; /* Slightly darker gray for right column */
 }
+/* IMAGES FORMATTING */
+.HeadShot {
+    width: 100px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
 
 #education ul {
     list-style: none;
