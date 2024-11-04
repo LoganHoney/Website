@@ -95,6 +95,12 @@ main{
 	    border-radius: 50%; /* Make the image round */
 	    object-fit: cover; /* Ensure the image covers the area without distortion */
 }
+#Innovate  {
+    border: 1px solid #000000; /* black border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside sections */
+    margin: 20px 15px; /* Space between sections */
+}
 
 #Elevate  {
     background-color: rgba(26, 159, 193, 0.4); /*Theme Color background*/
