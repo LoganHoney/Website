@@ -71,6 +71,7 @@ main{
 }
 
 .Open_About {
+    text-indent: 30px;
     text-align: left;
     width: 300px;
     margin: 0 15px;
