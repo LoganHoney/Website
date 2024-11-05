@@ -79,6 +79,7 @@ main{
 .Desktop_About {
     width: 30%;
     margin: 0 auto;
+    text-align: left;
 }
 
 .TwoColumn{
