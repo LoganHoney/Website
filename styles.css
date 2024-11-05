@@ -76,6 +76,10 @@ main{
     width: 300px;
     margin: 0 10px;
 }
+.Desktop_About {
+    width: 30 vw;
+    margin: 0 auto;
+}
 
 .TwoColumn{
     display: flex;
