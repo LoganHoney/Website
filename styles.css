@@ -84,14 +84,15 @@ main{
 
 .left {
     background-color: #f0f0f0; /* Light gray background for left column */
-    border: 1px;
-    border-color: #000000;
+    border: 1px solid #000000;
     border-radius: 15px;
 	
 }
 
 .right {
     background-color: #e0e0e0; /* Slightly darker gray for right column */
+    border: 1px solid #000000;
+    border-radius: 15px;
 }
 
 .Headshot {
