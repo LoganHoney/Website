@@ -83,15 +83,7 @@ main{
     border: 1px solid #000000;
     border-radius: 15px;
     margin:20px;
-}
-
-.left {
-    background-color: #f0f0f0; /* Light gray background for left column */
-  
-}
-
-.right {
-    background-color: #e0e0e0; /* Slightly darker gray for right column */
+    background-color: #f0f0f0;
 }
 
 .Headshot {
