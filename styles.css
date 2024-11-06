@@ -70,6 +70,28 @@ main{
     margin: 20px;
 }
 
+.Education {
+}
+
+.zigzag-border {
+    position: relative;
+    padding: 20px;
+    background-color: #fff; /* Background color of the content */
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+.zigzag-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px; /* Height of the zigzag */
+    background: #f00; /* Color of the zigzag */
+    clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+    z-index: -1; /* Place it behind the content */
+}
+
 .Mobile_About {
     text-indent: 20px;
     text-align: left;
