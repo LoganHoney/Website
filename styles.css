@@ -5,6 +5,7 @@ html,body{
   overflow-x:hidden;
 }
 
+
 header{
     background-color: #000000; /* Header background color */
     color: #FFFFFF; /* Header text color */
@@ -18,8 +19,13 @@ header{
     
 ul {
 	list-style-type: none;
-
 }
+
+
+a {
+	text-decoration:none;
+}
+
 
 img {
 	border-radius: 25px;
