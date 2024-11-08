@@ -56,7 +56,8 @@ main{
     margin: 0 auto;
     border: 1px solid #000000;
     border-radius: 15px
-    background: radial-gradient(circle, #03aee5, #0283AC); 
+    background-image: linear-gradient(to right, #03aee5, #0283AC); 
+    margin: 20px;
 }
 .Desktop_About {
     width: 30%;
