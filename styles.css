@@ -49,20 +49,14 @@ main{
 	color:#FFFFFF;
 }
 
-.Quote {
+.Quote{
     text-indent: 20px;
     text-align: center;
     width: 70%;
     margin: 0 auto;
     border: 1px solid #000000;
-    border-radius: 15px
-    background-image: linear-gradient(to right, #03aee5, #0283AC); 
-   
-}
-.Desktop_About {
-    width: 30%;
-    margin: 0 auto;
-    text-align: left;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #03aee5, #0283AC);    
 }
 
 .TwoColumn{
@@ -143,17 +137,10 @@ footer {
 	    border-radius: 50%; /* Make the image round */
 	    object-fit: cover; /* Ensure the image covers the area without distortion */
 	}
-	.Desktop_About{
-		display:none;
-	}
+	
 }
 @media (min-width: 768px) {
 	.Container{
 		display:none
 	}
-	.Mobile_About {
-		display:none;
-	}
-}		
-
-
+}
