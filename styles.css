@@ -34,32 +34,6 @@ main{
 	margin:20;
 }
 
-.sidebar {
-	position: absolute;
-    top: 0; /* Align to the top */
-    right: 0; /* Align to the right */
-    background-color: #000000; /* Sidebar background color */
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-	display: flex;
-	
-}
-
-.sidebar li {
-    margin-right: 15px; /* Padding for each list item */
-}
-
-.sidebar a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    
-}
-
-.sidebar a:hover {
-   font-weight: bold;
-   color: #03aee5;
-}
-
 .highlight {
     color:#03aee5;
     font-weight:bold;
@@ -75,10 +49,10 @@ main{
 	color:#FFFFFF;
 }
 
-.Mobile_About {
+.Quote {
     text-indent: 20px;
     text-align: left;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 .Desktop_About {
