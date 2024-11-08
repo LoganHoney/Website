@@ -60,21 +60,7 @@ main{
   
 }
 
-.TwoColumn{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
 
-.column {
-    flex: 1; /* Each column will take equal space */
-    padding: 15px;
-    box-sizing: border-box; /* Include padding in width calculation */
-    border: 1px solid #000000;
-    border-radius: 15px;
-    margin:20px;
-    background-color: #f0f0f0;
-}
 
 .Headshot {
 	    width: 300px; /* Set the width of the image */
