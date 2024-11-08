@@ -56,7 +56,7 @@ main{
     margin: 0 auto;
     border: 1px solid #000000;
     border-radius: 15px;
-    background-image: radial-gradient(circle, #03aee5, #0283AC);    
+    background-image: radial-gradient(circle, #FFFFFF, #03aee5);    
 }
 
 .TwoColumn{
