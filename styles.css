@@ -52,11 +52,11 @@ main{
 .Quote{
     text-indent: 20px;
     text-align: center;
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 10px auto;
     border: 1px solid #000000;
     border-radius: 15px;
-    background-image: radial-gradient(circle,  #03aee5, #FFFFFF);    
+  
 }
 
 .TwoColumn{
