@@ -54,6 +54,9 @@ main{
     text-align: left;
     width: 70%;
     margin: 0 auto;
+    border: 1px solid #000000;
+    border-radius: 15px
+    background: radial-gradient(circle, #03aee5, #0283AC); 
 }
 .Desktop_About {
     width: 30%;
