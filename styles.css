@@ -72,6 +72,15 @@ main{
     padding: 20px;
   
 }
+.Contact {
+    background-color:#000000;
+    color:#FFFFFF;
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+}
 
 
 
