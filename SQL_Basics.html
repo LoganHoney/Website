@@ -3,34 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL_Basics</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <title>Understanding SQL: The Language of Data</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-	<header>
-	<nav>
-		<ul class="sidebar">
-				<li> <a rel = "html" href=".\"> Home</a> </li>
-				<li> <a rel = "html" href=".\about"> About Me</a> </li>
-				<li> <a rel = "html" href=".\education">Education</a> </li>
-				
-		</ul>
-		 
-			
-		<button class="hamburger-button">
-			<span></span>
-		
-			<ul class="hamburger-menu">
-				<li> <a rel = "html" href=".\"> Home</a> </li>
-				<li> <a rel = "html" href=".\about"> About Me</a> </li>
-				<li> <a rel = "html" href=".\education">Education</a> </li>
-			</ul>
-		</button>	
-	</nav>
-	</header>
-	
-        <h2> My Portfolio </h2>
-            <p> This part still under construction! </p>
+
+    <header>
+        <h1>Understanding SQL: The Language of Data</h1>
+        <p class="highlight">Your guide to mastering the fundamentals of SQL</p>
+    </header>
+
+    <main>
+        <section id="Innovate">
+            <h2>📜 A Brief History of SQL</h2>
+            <p>SQL, which stands for <span class="highlight">Structured Query Language</span>, was developed in the early 1970s by Donald D. Chamberlin and Raymond F. Boyce at IBM. It was originally called <em>SEQUEL</em> and used to query IBM’s System R database.</p>
+            <p>By 1986, SQL became the standard for interacting with relational databases, and today it powers systems like <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, and <strong>SQL Server</strong>.</p>
+        </section>
+
+        <section id="Elevate">
+            <h2>🗃️ What Is a Relational Database?</h2>
+            <p>A <span class="highlight">relational database</span> organizes data into tables made of rows and columns. Each table is like a spreadsheet, where:</p>
+            <ul>
+                <li><strong>Columns</strong> define data types (e.g., Name, Email)</li>
+                <li><strong>Rows</strong> hold actual data records</li>
+            </ul>
+            <p>Tables can be connected using <span class="highlight">keys</span>, such as primary and foreign keys.</p>
+
+            <h3>🔗 Example:</h3>
+            <p><strong>Customers Table</strong></p>
+            <pre>
+Customer_ID | First_Name | Last_Name
+----------- | -----------|----------
+101         | Alice      | Johnson
+102         | Bob        | Smith
+            </pre>
+
+            <p><strong>Orders Table</strong></p>
+            <pre>
+Order_ID | Customer_ID | Product
+-------- | ------------|--------
+001      | 101         | Laptop
+002      | 102         | Phone
+            </pre>
+            <p>This structure allows us to connect which customer made which order using the <code>Customer_ID</code>.</p>
+        </section>
+
+        <section class="Quote">
+            <h2>💡 SQL Syntax Basics: SELECT, FROM, WHERE</h2>
+            <p>Let’s explore the core SQL statements used to retrieve data:</p>
+
+            <h3>1. SELECT – Choose the data</h3>
+            <pre>SELECT First_Name, Last_Name</pre>
+
+            <h3>2. FROM – Specify the table</h3>
+            <pre>FROM Customers</pre>
+
+            <h3>3. WHERE – Filter the results</h3>
+            <pre>WHERE Customer_ID = 101;</pre>
+
+            <h3>✅ Full Example:</h3>
+            <pre>
+SELECT First_Name, Last_Name
+FROM Customers
+WHERE Customer_ID = 101;
+            </pre>
+            <p>This query returns the name of the customer whose ID is 101.</p>
+        </section>
+
+        <section class="Contact">
+            <h2>👋 Wrapping Up</h2>
+            <p>SQL is the foundation of working with structured data. Whether you're analyzing business trends or building applications, knowing how to <span class="highlight">query data</span> is an essential skill.</p>
+            <p>Stay tuned for the next post in this series where we’ll explore <strong>JOINs</strong> and how to query across multiple tables!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SQL Basics Blog. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
