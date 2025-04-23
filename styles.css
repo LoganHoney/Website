@@ -81,7 +81,16 @@ main{
     border-radius: 15px;
     padding: 20px;
 }
-
+.Content{
+    text-indent: 20px;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+  
+}
 
 
 .Headshot {
