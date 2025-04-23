@@ -46,6 +46,8 @@ Order_ID | Customer_ID | Product
 002      | 102         | Phone
             </pre>
             <p>This structure allows us to connect which customer made which order using the <code>Customer_ID</code>.</p>
+            <p> The columns <code>Customers.Customer_ID</code>and <code>Order.Order_ID</code> are <span class="highlight">primary</span> keys whereas <code>Orders.customer_id</code> is a <span class="highlight">foreign</span> key.
+            
         </section>
 
         <section class="Quote">
@@ -67,7 +69,7 @@ SELECT First_Name, Last_Name
 FROM Customers
 WHERE Customer_ID = 101;
             </pre>
-            <p>This query returns the name of the customer whose ID is 101.</p>
+            <p>This query returns Alice Johson. Considering our example table above.</p>
         </section>
 
         <section class="Contact">
