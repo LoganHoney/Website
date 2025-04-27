@@ -100,16 +100,18 @@ main{
 }
 #Innovate  {
     border: 1px solid #000000; /* black border */
+    width: 80%;
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside sections */
-    margin: 20px 15px; /* Space between sections */
+    margin: 10px auto; /* Space between sections */
 }
 
 #Elevate  {
     border: 1px solid #000000; /* black border */
+    width: 80%;
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside sections */
-    margin: 20px 15px; /* Space between sections */
+    margin: 10px auto; /* Space between sections */
 }
 	
 #education ul {
@@ -160,4 +162,72 @@ footer {
 	.Container{
 		display:none
 	}
+}
+
+/* Styleing for SQL Series */
+
+#one  {
+    border: 1px solid #000000; /* black border */
+    width: 80%;
+    background-color:#000000;
+    color:#FFFFFF;
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside sections */
+    margin: 10px auto; /* Space between sections */
+}
+
+#two {
+    border: 1px solid #000000; /* black border */
+    width: 80%;
+    background-color:#000000;
+    color:#FFFFFF;
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside sections */
+    margin: 10px auto; /* Space between sections */
+}
+
+#three  {
+    border: 1px solid #000000; /* black border */
+    width: 80%;
+    background-color:#000000;
+    color:#FFFFFF;
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside sections */
+    margin: 10px auto; /* Space between sections */
+}
+
+#four  {
+    border: 1px solid #000000; /* black border */
+    width: 80%;
+    background-color:#000000;
+    color:#FFFFFF;
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside sections */
+    margin: 10px auto; /* Space between sections */
+}
+
+/* Styling for grid*/
+.grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.definition, .example {
+    width: 47%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+/*highlight*/
+.highlighty {
+    color:#ebd834;
+    font-weight:bold;
+}
+
+code {
+    
+    font-weight: bolder;
+    color: grey
+
 }
