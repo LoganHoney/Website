@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding SQL: The Language of Data</title>
+    <title>SQL: The Language of Data</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
@@ -19,15 +19,11 @@
             <p>In order to know where we are, it's important to know the history. Even if it may not be directly applicable to using SQL, I'm going to nerd out for a minute anyways.</p>
             <p> SQL, which stands for <span class="highlight">Structured Query Language</span>, was developed in the early 1970s by Donald D. Chamberlin and Raymond F. Boyce at IBM. It was originally called <em>SEQUEL (Structured English Query Language)</em> and used to query IBM’s System R database.</p>
             <p>In 1974, Chamberlain and Boyce introduced the language to the world in their article <a href="https://s3.us.cloud-object-storage.appdomain.cloud/res-files/2705-sequel-1974.pdf"><strong class="highlight" style="text-decoration: underline;">SEQUEL: A Structured English Query Language</strong></a>.  In that paper, they proposed SEQUEL as an anlernative to SQUARE. The following quote is from that article:</p>
-<pre>
-"The SEQUEL language is equivalent in 
- power to SQUARE, but it is intended for
- users who are more confortable with an 
- English-keyword format than with the terse
- mathematical notation of SQUARE." 
-</pre>
+        <p style="font-style: italic;">
+        "The SEQUEL language is equivalent in power to SQUARE, but it is intended for users who are more confortable with an English-keyword format than with the terse mathematical notation of SQUARE." 
+        </p>
             <p>By 1986, SEQUEL had been renamed SQL and it became standardized by the American National Standards Institue (ANSI). Since then, there have been many updates to the language but many of the basics remain the same. Today it powers relational database management systems like <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, and <strong>SQL Server</strong>.</p>
-            <p>If you are a student majoring in Data Science or just a little bit of a nerd, I highly encourage you to read this article. It may not hold extreme relevance in Syntax but it is filled with insight into the language's author's intent.</p>
+            <p>If you are a student majoring in Data Science or just a little bit of a nerd, I highly encourage you to read this article. It may not hold extreme relevance in syntax but it is filled with insight into the language's "author's intent".</p>
         </section>
  
         <section id="two">
@@ -61,7 +57,7 @@ Order_ID | <span class="highlight">Customer_ID</span> | Product
 
          <section id="three">
             <h2>SQL Syntax Basics: SELECT, FROM, WHERE</h2>
-            <p>The core structure of a query can be described as the <span class="highlight">SELECT-FROM-WHERE</span> block, which allows you to retrieve specific data from a database. Each clause in the statement serves a dedicated purpose</p>
+            <p>According to Chamberlain and Boyce, the core structure of a query can be described as the <span class="highlight">SELECT-FROM-WHERE</span> block, which allows you to retrieve specific data from a database. Today it is more widely known as the SELECT statement. The statement is made up of clauses, each clause serving a dedicated purpose.</p>
         
             <h3><span class = "highlight">SELECT</span> – the data being searched for.</h3>
             <h3><span class = "highlight">FROM</span> – the location of that data.</h3>
