@@ -16,6 +16,11 @@ header{
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
 }
+
+.About{
+    text-align: center;
+    margin: 20px;
+}
     
 ul {
 	list-style-type: none;
