@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding SQL: The Language of Data</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
@@ -14,26 +14,34 @@
     </header>
 
     <main>
-        <section id="Innovate">
+        <section id="one">
             <h2>A Brief History of SQL</h2>
             <p>In order to know where we are, it's important to know the history. Even if it may not be directly applicable to using SQL, I'm going to nerd out for a minute anyways.</p>
             <p> SQL, which stands for <span class="highlight">Structured Query Language</span>, was developed in the early 1970s by Donald D. Chamberlin and Raymond F. Boyce at IBM. It was originally called <em>SEQUEL (Structured English Query Language)</em> and used to query IBM’s System R database.</p>
-            <p>In 1974, Chamberlain and Boyce introduced the language to the world in their article <a href="https://s3.us.cloud-object-storage.appdomain.cloud/res-files/2705-sequel-1974.pdf"><strong>SEQUEL: A Structured English Query Language.</strong></a> By 1986, SQL became standardized by the American National Standards Institue (ANSI). Since then, there have been many updates to the language but many of the basics remain the same. Today it powers relational database management systems like <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, and <strong>SQL Server</strong>.</p>
+            <p>In 1974, Chamberlain and Boyce introduced the language to the world in their article <a href="https://s3.us.cloud-object-storage.appdomain.cloud/res-files/2705-sequel-1974.pdf"><strong class="highlight" style="text-decoration: underline;">SEQUEL: A Structured English Query Language</strong></a>.  In that paper, they proposed SEQUEL as an anlernative to SQUARE. The following quote is from that article:</p>
+<pre> 
+     "The SEQUEL language is equivalent in 
+     power to SQUARE, but it is intended for
+     users who are more confortable with an 
+     English-keyword format than with the terse
+     mathematical notation of SQUARE." 
+</pre>
+            <p>By 1986, SEQUEL had been renamed SQL and it became standardized by the American National Standards Institue (ANSI). Since then, there have been many updates to the language but many of the basics remain the same. Today it powers relational database management systems like <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, and <strong>SQL Server</strong>.</p>
+            <p>If you are a student majoring in Data Science or just a little bit of a nerd, I highly encourage you to read this article. It may not hold extreme relevance in Syntax but it is filled with insight into the language's author's intent.</p>
         </section>
-
-        <section id="Elevate">
+ 
+        <section id="two">
             <h2>What Is a Relational Database?</h2>
-            <p>A <span class="highlight">relational database</span> organizes data into tables made of rows and columns. Each table is like a spreadsheet, where:</p>
-            <ul>
-                <li><strong>Columns</strong> define data types (e.g., Name, Email)</li>
-                <li><strong>Rows</strong> hold actual data records</li>
-            </ul>
-            <p>Tables can be connected using <span class="highlight">keys</span>, such as primary and foreign keys.</p>
+            <p>A relational database organizes data into tables made of rows and columns. A table should be named according to the data contained in it (if the database was designed efficiently). Each table is like a spreadsheet, where:</p>
+            <p></p>
+            <p><strong>Columns</strong> - describe the data stored (e.g., name, email, dob) <br><strong>Rows</strong> - store actual data records (e.g., John, johndoe@email.com, 01-01-1972)</p>
+            <p></p>
+            <p>Tables can be connected using <span class="highlight">keys</span>, such as <strong>primary</strong> and <strong>foreign</strong> keys. We will take a much closer look when we cover <span class = "highlight">JOINS</span> in a later article. However, I hope that the example below provides enough clarity to illustrate the relationships that tables can have between one another.</p>
 
             <h3>Example:</h3>
             <p><strong>Customers Table</strong></p>
             <pre>
-Customer_ID | First_Name | Last_Name
+<span class="highlight">Customer_ID</span> | First_Name | Last_Name
 ----------- | -----------|----------
 101         | Alice      | Johnson
 102         | Bob        | Smith
@@ -41,47 +49,87 @@ Customer_ID | First_Name | Last_Name
 
             <p><strong>Orders Table</strong></p>
             <pre>
-Order_ID | Customer_ID | Product
+Order_ID | <span class="highlight">Customer_ID</span> | Product
 -------- | ------------|--------
 001      | 101         | Laptop
 002      | 102         | Phone
             </pre>
            
-            <p> The columns <code>Customers.Customer_ID</code> and <code>Order.Order_ID</code> are <span class="highlight">primary</span> keys whereas <code>Orders.customer_id</code> is a <span class="highlight">foreign</span> key.
-             <p>This structure allows us to connect which customer made which order using the <code>Customer_ID</code>.</p>
-        </section>
+            <p> The columns <code>Customers.Customer_ID</code> and <code>Orders.Order_ID</code> are <span class="highlight">primary</span> keys whereas <code>Orders.customer_id</code> is a <span class="highlight">foreign</span> key.
+             <p>This structure allows us to connect which customer made which order using the <code>Customer_ID</code> (The key exists in both tables).</p>  
+         </section>
 
-        <section id="Elevate">
+         <section id="three">
             <h2>SQL Syntax Basics: SELECT, FROM, WHERE</h2>
-            <p>Let’s explore the core SQL statements used to retrieve data:</p>
+            <p>The core structure of a query can be described as the <span class="highlight">SELECT-FROM-WHERE</span> block, which allows you to retrieve specific data from a database. Each clause in the statement serves a dedicated purpose</p>
+        
+            <h3><span class = "highlight">SELECT</span> – the data being searched for.</h3>
+            <h3><span class = "highlight">FROM</span> – the location of that data.</h3>
+            <h3><span class = "highlight">WHERE</span> – the criteria the data must meet</h3>
+            
+            <!--SELECT-->
+            <div class = "grid">
+                <div class = "definition">
+                <h4><span class = "highlight">SELECT</span></h4>
+                 <p>In the SELECT clause, you specify all the columns you want to retrieve from a database table. This allows you to extract specific pieces of information or nominal data relevant to your analysis. For example:</p>
+                </div>
+                
+                <div class = "example">
+                <code>SELECT First_Name, Last_Name</code>
+                </div>
+            </div>
+            
+            <!--FROM-->        
+            <div class = "grid">
+                <div class = "definition">
+                <h4><span class = "highlight">FROM</span></h4>
+                 <p>In the FROM clause, you tell the query in which table it needs to search. You can also use the FROM clause with multiple tables to combine data, but we’ll dive into joins later.</p>
+                </div>
+                
+                <div class = "example">
+                <code>FROM Customers</code>
+                </div>
+            </div>
 
-            <h3>1. SELECT – Choose the data</h3>
-            <pre>SELECT First_Name, Last_Name</pre>
-
-            <h3>2. FROM – Specify the table</h3>
-            <pre>FROM Customers</pre>
-
-            <h3>3. WHERE – Filter the results</h3>
-            <pre>WHERE Customer_ID = 101;</pre>
-
-            <h3>Full Example:</h3>
-            <pre>
-SELECT First_Name, Last_Name
-FROM Customers
-WHERE Customer_ID = 101;
-            </pre>
-            <p>This query returns Alice Johson. Considering our example table above.</p>
+           <!--WHERE-->
+            <div class = "grid">
+                <div class = "definition">
+                <h4><span class = "highlight">WHERE</span></h4>
+                 <p>Understanding the WHERE clause is the begining of building powerful queries.It allows you to filter the data based on specific criteria.</p>
+                </div>
+                
+                <div class = "example">
+                <code>WHERE Customer_ID = 101;</code>
+                </div>
+            </div>
+        
+            
+                   
+            <h3>Putting It All Together</h3>
+            <p>When combined, the complete query looks like this:</p>
+           <pre><code>
+        SELECT First_Name, Last_Name
+        FROM Customers
+        WHERE Customer_ID = 101;
+            </code></pre>
+           
+            <p>This query returns the following based on the previous table examples:</p>
+            <pre><code>
+        First_Name | Last_Name
+        -----------|----------
+        Alice      | Johnson
+            </code></pre>
         </section>
-
-        <section class="Contact">
+        
+        <section id="four">
             <h2>Wrapping Up</h2>
-            <p>SQL is the foundation of working with structured data. Whether you're analyzing business trends or building applications, knowing how to <span class="highlight">query data</span> is an essential skill.</p>
-            <p>Stay tuned for the next post in this series where we’ll explore <strong>JOINs</strong> and how to query across multiple tables!</p>
+            <p>SQL is the foundation of working with structured data. Whether you're analyzing business trends or building applications, knowing how to query data effectively is an essential skill. It requires little knowledge to get started yet it can provide tremendous value to nearly any career field.</p>
+            <p>In the next article in this series, will explore <span class = "highlight"><strong>JOINS</strong></span> and how to query across multiple tables!</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 SQL Basics Blog. All rights reserved.</p>
+        <p>&copy; Logan Honey: 2025 SQL Basics. All rights reserved.</p>
     </footer>
 
 </body>
