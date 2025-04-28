@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL: Logical Operators</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>SQL: The Language of Data</h1>
+        <p class="highlight">Logical Operators: AND & OR</p>
+    </header>
+
+    <main>
+        <section id="one">
+            <h2>What are logical operators?</h2>
+            <p>Logical operators are used to apply multiple criteria that data must meet in order to be retrieved by our query. Criteria for data is placed in the <span class = "highliht">WHERE</span> clause. Logical operators differ from comparison operators in that logical operators are testing wether the criteria is met and not actully defining the criteria. </p>
+            <p>Some common logical operators include: AND, OR, NOT, LIKE, IN, & BETWEEN. These operators are the foundation to building some powerful queries. Some less common logical operators include: SOME, ANY, ALL, EXISTS. These logical operators are used in conjunction with <span class = "highlight">subqueries</span> and will be covered in depth later. For now, just now that these less common operators are used in incredibly specific scenarios.</p>
+ 
+        <section id="two">
+            <h2>AND & OR</h2>
+            <p>The two operators I want to share today are AND & OR as they are the two most common logical operators in my experience.</p>
+            <h4>AND</h4>
+            <p><span class="highlight">AND</span> is used to return data <strong>only when both</strong> conditions between the AND are met.</p>
+            <h4>OR</h4>
+            <p><span class="highlight">OR</span> is used to retuen data <strong>when at least one</strong> of the conditions are met </p>
+            <p>There is no limit on how many logical operators that can be used in a WHERE clause. However, it is important to note that the distinctions between how these two operators work are huge. As more <span class ="highlight">AND</span> operators are added, the resulting dataset will be smaller as more constrains are being placed on the data. In contrast, as more <span class="highlight">OR</span> operators are added, the resulting dataset will grow because the data needs only meet <strong>one</strong> of the criteria and not <strong>all</strong>.</p>
+          
+         </section>
+
+         <section id="three">
+            <h2>SQL Syntax: Using AND & OR</h2>
+            <h3>Example:</h3>
+            <p><strong>Customers Table</strong></p>
+            <pre>
+Customer_ID | First_Name | Last_Name
+----------- | -----------|----------
+101         | Alice      | Johnson
+102         | Bob        | Smith
+103         | Logan      | Honey
+104         | Tim        | King
+105         | John       | Doe
+106         | Bob        | Jacobson
+            </pre>
+            <p> Here we have the <code>Customers</code> table just with a few more entried than before.</p>
+            <!--SELECT-->
+            <div class = "grid">
+                <div class = "definition">
+                <h4><span class = "highlight">AND</span></h4>
+                <p> All employees who have a first name of Bob.</p>
+                 <ul>
+                  <li><code>SELECT Customer_ID</code></li>
+                  <li><code>FROM Customers</code></li>
+                  <li><code>First_Name = 'Bob'</code></li>
+                </div>
+                
+                <div class = "example">
+                <code><pre>
+                      Customer_ID
+                      -----------
+                      102 
+                      106
+                </pre></code>
+                </div>
+            </div>
+            
+            <!--FROM-->        
+            <div class = "grid">
+                <div class = "definition">
+                <h4><span class = "highlight">FROM</span></h4>
+                 <p>In the FROM clause, you tell the query in which table it needs to search. You can also use the FROM clause with multiple tables to combine data, but we’ll dive into joins later.</p>
+                </div>
+                
+                <div class = "example">
+                <code>FROM Customers</code>
+                </div>
+            </div>
+
+           <!--WHERE-->
+            <div class = "grid">
+                <div class = "definition">
+                <h4><span class = "highlight">WHERE</span></h4>
+                 <p>Understanding the WHERE clause is the begining of building powerful queries.It allows you to filter the data based on specific criteria.</p>
+                </div>
+                
+                <div class = "example">
+                <code>WHERE Customer_ID = 101;</code>
+                </div>
+            </div>
+        
+            
+                   
+            <h3>Putting It All Together</h3>
+            <p>When combined, the complete query looks like this:</p>
+           <pre><code>
+        SELECT First_Name, Last_Name
+        FROM Customers
+        WHERE Customer_ID = 101;
+            </code></pre>
+           
+            <p>This query returns the following based on the previous table examples:</p>
+            <pre><code>
+        First_Name | Last_Name
+        -----------|----------
+        Alice      | Johnson
+            </code></pre>
+        </section>
+        
+        <section id="four">
+            <h2>Wrapping Up</h2>
+            <p>SQL is the foundation of working with structured data. Whether you're analyzing business trends or building applications, knowing how to query data effectively is an essential skill. It requires little knowledge to get started yet it can provide tremendous value to nearly any career field.</p>
+            <p>In the next article in this series, will explore <span class = "highlight">CONJUCTIONS</span>. They can add incredible power to your querying. </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Logan Honey: 2025 SQL Basics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
