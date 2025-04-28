@@ -186,6 +186,13 @@ footer {
     border-radius: 15px;
 }
 
+.definition2, .example2 {
+    width: 94%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
 /*highlight*/
 .highlighty {
     color:#ebd834;
