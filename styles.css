@@ -172,6 +172,13 @@ footer {
     justify-content: space-between;
 }
 
+.grid2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
 .definition, .example {
     width: 47%; /* Adjust width as needed */
     padding: 10px;
