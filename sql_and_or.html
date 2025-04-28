@@ -17,14 +17,28 @@
         <section id="one">
             <h2>What are logical operators?</h2>
             <p>Logical operators are used to apply multiple criteria that data must meet in order to be retrieved by our query. Criteria for data is placed in the <span class = "highliht">WHERE</span> clause. Logical operators differ from comparison operators in that logical operators are testing wether the criteria is met and not actully defining the criteria. </p>
-            <p>Some common logical operators include: AND, OR, NOT, LIKE, IN, & BETWEEN. These operators are the foundation to building some powerful queries. Some less common logical operators include: SOME, ANY, ALL, EXISTS. These logical operators are used in conjunction with <span class = "highlight">subqueries</span> and will be covered in depth later. For now, just now that these less common operators are used in incredibly specific scenarios.</p>
+            <p>Some common logical operators include:</p>
+            <ul>
+                <li>AND</li>
+                <li>OR</li>
+                <li>NOT</li> 
+                <li>LIKE</li> 
+                <li>IN</li> 
+                <li>BETWEEN</li> 
+            </ul>
+            <p>Some less common logical operators include: 
+            <ul>
+                <li>SOME</li>
+                <li>ANY</li>
+                <li>ALL</li> 
+                <li>EXISTS</li> 
+            </ul>
+            <p>These logical operators are used in conjunction with <span class = "highlight">subqueries</span> and will be covered in depth later. For now, just now that these less common operators are used in incredibly specific scenarios.</p>
         </section>
         <section id="two">
             <h2>AND & OR</h2>
             <p>The two operators I want to share today are AND & OR as they are the two most common logical operators in my experience.</p>
-            <h4>AND</h4>
             <p><span class="highlight">AND</span> is used to return data <strong>only when both</strong> conditions between the AND are met.</p>
-            <h4>OR</h4>
             <p><span class="highlight">OR</span> is used to retuen data <strong>when at least one</strong> of the conditions are met </p>
             <p>There is no limit on how many logical operators that can be used in a WHERE clause. However, it is important to note that the distinctions between how these two operators work are huge. As more <span class ="highlight">AND</span> operators are added, the resulting dataset will be smaller as more constrains are being placed on the data. In contrast, as more <span class="highlight">OR</span> operators are added, the resulting dataset will grow because the data needs only meet <strong>one</strong> of the criteria and not <strong>all</strong>.</p>
           
@@ -45,73 +59,138 @@ Customer_ID | First_Name | Last_Name
 106         | Bob        | Jacobson
             </pre>
             <p> Here we have the <code>Customers</code> table just with a few more entried than before.</p>
-            <!--SELECT-->
+            <!--Normal-->
             <div class = "grid">
                 <div class = "definition">
-                <h4><span class = "highlight">AND</span></h4>
+                <h4><span class = "highlight">Normal</span></h4>
                 <p> All employees who have a first name of Bob.</p>
-                 <ul>
-                  <li><code>SELECT Customer_ID</code></li>
-                  <li><code>FROM Customers</code></li>
-                  <li><code>First_Name = 'Bob'</code></li>
+                 <code><pre>
+SELECT Customer_ID
+FROM Customers
+WHERE First_Name = 'Bob'
+                </pre></code>
                 </div>
                 
                 <div class = "example">
                 <code><pre>
-                      Customer_ID
-                      -----------
-                      102 
-                      106
+Customer_ID
+-----------
+102 
+106
                 </pre></code>
                 </div>
             </div>
             
-            <!--FROM-->        
-            <div class = "grid">
+			<!--AND-->
+           <div class = "grid">
                 <div class = "definition">
-                <h4><span class = "highlight">FROM</span></h4>
-                 <p>In the FROM clause, you tell the query in which table it needs to search. You can also use the FROM clause with multiple tables to combine data, but we’ll dive into joins later.</p>
+                <h4><span class = "highlight">AND</span></h4>
+                <p> All employees who have a first name of Bob and a last name of Jacobson.</p>
+                 <code><pre>
+SELECT Customer_ID
+FROM Customers
+WHERE First_Name = 'Bob' 
+        AND Last_Name  'Jacobson'
+
+                  </pre></code>
+				  
                 </div>
                 
                 <div class = "example">
-                <code>FROM Customers</code>
+                <code><pre>
+Customer_ID
+----------- 
+106
+                </pre></code>
                 </div>
             </div>
 
-           <!--WHERE-->
+           <!--OR-->
             <div class = "grid">
                 <div class = "definition">
-                <h4><span class = "highlight">WHERE</span></h4>
-                 <p>Understanding the WHERE clause is the begining of building powerful queries.It allows you to filter the data based on specific criteria.</p>
+                <h4><span class = "highlight">OR</span></h4>
+                <p> All employees who have a first name of either Bob or Tim.</p>
+                 
+                <code><pre>
+SELECT Customer_ID
+FROM Customers
+WHERE First_Name = 'Bob' 
+        OR First_Name  'Tim'
+                </pre></code>
+				  
                 </div>
                 
                 <div class = "example">
-                <code>WHERE Customer_ID = 101;</code>
+                <code><pre>
+Customer_ID
+-----------
+102 
+104
+106
+                </pre></code>
                 </div>
             </div>
         
             
                    
-            <h3>Putting It All Together</h3>
-            <p>When combined, the complete query looks like this:</p>
-           <pre><code>
-        SELECT First_Name, Last_Name
-        FROM Customers
-        WHERE Customer_ID = 101;
-            </code></pre>
-           
-            <p>This query returns the following based on the previous table examples:</p>
-            <pre><code>
-        First_Name | Last_Name
-        -----------|----------
-        Alice      | Johnson
-            </code></pre>
-        </section>
+            <h3>To Note</h3>
+            <div class = "grid">
+                <div class = "definition">
+                    
+                    <p>AND operators cannot be applied to the same columns. For Example:</p>
+                    
+                    <code><pre>
+SELECT Customer_ID
+FROM Customers
+WHERE First_Name = 'Bob'
+        AND First_Name = 'Alice'
+                                </pre></code>
+                                           
+                </div>
+                
+                <div class = "example">
+                <code><pre>
+Customer_ID
+-----------
+                     
+                    
+                </pre></code>
+                <p>The reason that this will not work is because there is no instance where a single row in the <code>First_Name</code> column can be both Alice and Bob simultaneously.</p>
+            </div>
+        </div>
+        
+        <div class = "grid">
+            <div class = "definition">
+                
+                <p>The OR operator can be used since only one of the conditions needs to be true to return a row. For Example:</p>
+                
+                <code><pre>
+SELECT Customer_ID
+FROM Customers
+WHERE First_Name = 'Bob'
+        OR First_Name = 'Alice'
+                </pre></code>
+                                    
+                </div>
+            
+            <div class = "example">
+            <code><pre>
+Customer_ID
+-----------
+101
+102
+106
+                
+            </pre></code>
+            <p>This returns every <code>Customer_ID</code> for rows in the <code>First_Name</code> column that equal either Bob or Alice.</p>
+            </div>
+        </div>
+     </section>
         
         <section id="four">
             <h2>Wrapping Up</h2>
-            <p>SQL is the foundation of working with structured data. Whether you're analyzing business trends or building applications, knowing how to query data effectively is an essential skill. It requires little knowledge to get started yet it can provide tremendous value to nearly any career field.</p>
-            <p>In the next article in this series, will explore <span class = "highlight">CONJUCTIONS</span>. They can add incredible power to your querying. </p>
+            <p>The logical operators <span class="highlight">AND</span> & <span class="highlight">OR</span> are the foundations of building complex conditions. After all, a database is only as helpful as our ability to find what we seek. AND & OR are fantastic tools to add to you toolbox. </p>
+            <p>In the next article of this series, we will explore <span class = "highlight">Comparison Operators</span>. Comparison operators go hand in hand with logical operators. </p>
         </section>
     </main>
 
