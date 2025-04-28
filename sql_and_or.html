@@ -110,7 +110,7 @@ Customer_ID
                 <div class = "definition2">
                 <h4><span class = "highlight">OR</span></h4>
                 <p> All employees who have a first name of either Bob or Tim.</p>
-                 
+                 <h4>Query</h4>
                 <code><pre>
 SELECT Customer_ID
 FROM Customers
@@ -118,9 +118,9 @@ WHERE First_Name = 'Bob'
         OR First_Name = 'Tim'
                 </pre></code>
 				  
-                </div>
                 
-                <div class = "example2">
+                
+                <h4>Result</h4>
                 <code><pre>
 Customer_ID
 -----------
@@ -138,7 +138,7 @@ Customer_ID
                 <div class = "definition2">
                     
                     <p>AND operators cannot be applied to the same columns. For Example:</p>
-                    
+                    <h4>Query</h4>
                     <code><pre>
 SELECT Customer_ID
 FROM Customers
@@ -146,9 +146,9 @@ WHERE First_Name = 'Bob'
         AND First_Name = 'Alice'
                                 </pre></code>
                                            
-                </div>
                 
-                <div class = "example2">
+                
+                <h4>Result</h4>
                 <code><pre>
 Customer_ID
 -----------
@@ -163,7 +163,7 @@ Customer_ID
             <div class = "definition2">
                 
                 <p>The OR operator can be used since only one of the conditions needs to be true to return a row. For Example:</p>
-                
+                <h4>Query</h4>
                 <code><pre>
 SELECT Customer_ID
 FROM Customers
@@ -171,9 +171,9 @@ WHERE First_Name = 'Bob'
         OR First_Name = 'Alice'
                 </pre></code>
                                     
-                </div>
+                
             
-            <div class = "example2">
+            <h4>Result</h4>
             <code><pre>
 Customer_ID
 -----------
