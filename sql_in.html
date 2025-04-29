@@ -27,12 +27,12 @@
             <pre>
 First_Name | Last_Name | Cust_State
 -----------|-----------|---------
-Alice      | Johnson   | Arizona
-Bob        | Smith     | Alaska
-Raymond    | Barone    | New York
-Michael    | Scott     | Pennsylvania
-John       | Doe       | Florida
-Bob        | Jacobson  | Oklahoma
+Alice      | Johnson   | AZ
+Bob        | Smith     | AK
+Raymond    | Barone    | NY
+Michael    | Scott     | PA
+John       | Doe       | FL
+Bob        | Jacobson  | OK
             </pre>
             
             <!--IN-->
@@ -44,8 +44,7 @@ Bob        | Jacobson  | Oklahoma
                     <code><pre>
 SELECT First_Name, Last_Name
 FROM Customers
-WHERE Cust_State 
-    IN ('Arizona', 'Florida', 'New York')
+WHERE Cust_State IN ('AZ', 'FL', 'NY')
                     </pre></code>
                 
                     <h4>Result</h4>
