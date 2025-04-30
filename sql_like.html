@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL: Logical Operator LIKE</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>SQL: Logical Operators</h1>
+        <h2 class="highlight">LIKE</h2>
+    </header>
+
+    <main>
+        <section id="two">
+            <h2>LIKE</h2>
+            <p>This is one of my favorite logical operators because of its versatility and power. Hopefully by the end of this, <span class = "highlight">LIKE</span> will be one of your favorites too! </p>
+            <p>This operator is used primarily with wildcards. Before we get too deep into it, there are two priamry wildcards: * and %. Star (*) is used primarily after SELECT but percent (%) is used with LIKE. The % is used as a beginning or ending wildcard. Let's look at a few examples.</p>
+        </section>
+        
+        <section id="three">
+            <h2>SQL Syntax: Using LIKE</h2>
+            <h3>Example:</h3>
+            <p><strong>Employee Table</strong></p>
+            <pre>
+ First_Name | Last_Name | Title
+ -----------|-----------|------------
+ Alice      | Johnson   | Asst. Mgr
+ Bob        | Smith     | Clerk
+ Raymond    | Barone    | Writer
+ Michael    | Scott     | Mgr
+ John       | Doe       | Chef
+ Bill       | Jacobson  | Clerk
+ Joseph     | Robertson | Engineer
+            </pre>
+            <p>In the following examples pay attention to the placement of '%'. In SQL whenever searching strings, whatever you are searching for needs to be wrapped in quotations.</p>
+            <!--NOT-->
+            <div class = "grid">
+                <div class = "definition2">
+                    <h4><span class = "highlight">Begins With</span></h4>
+                    <h4>Prompt</h4>
+                    <p>"Find all information about employees whose titles begin with the letter 'C'.</p>
+                    <h4>Query</h4>
+                    <code><pre>
+SELECT *
+FROM Employee
+WHERE Title LIKE 'C%'
+                    </pre></code>
+                
+                    <h4>Result</h4>
+                
+                    <code><pre>
+ First_Name | Last_Name | Title
+ -----------|-----------|------------
+ Bob        | Smith     | Clerk
+ John       | Doe       | Chef
+ Bill       | Jacobson  | Clerk    
+                </pre></code>
+                <p>This returned Bob, John, and Bill. </p>
+                </div>
+                
+            </div>
+            <p></p>
+			<!--LIKE SANDWICH-->
+           <div class = "grid">
+                <div class = "definition2">
+                <h4><span class = "highlight">Contains</span></h4>
+                <h4>Prompt</h4>
+                <p>Find the first and last name of all employees whose first name contains 'a;. </p>
+                <h4>Query</h4>
+                 <code><pre>
+SELECT First_Name, Last_Name
+FROM Employee
+WHERE First_Name LIKE '%a%'
+
+                  </pre></code>
+				  
+                  <h4>Result</h4>
+                <code><pre>
+ First_Name | Last_Name 
+ -----------|-----------
+ Alice      | Johnson   
+ Raymond    | Barone    
+ Michael    | Scott     
+                </pre></code>
+                <p>This returned Alice, Raymond, and Michael. (Notice the placement of the %'s, we needed to wrap 'a' so that if it appeared anywhere in the <code>First_Name</code>, it was returned.</p>
+                </div>
+            </div>
+
+            <!--NOT IN-->
+           <div class = "grid">
+            <div class = "definition2">
+            <h4><span class = "highlight">Ends With</span></h4>
+            <h4>Prompt</h4>
+            <p>Find the all information about all employees whose title end with 'r'.</p>
+            <h4>Query</h4>
+             <code><pre>
+SELECT *
+FROM Employee
+WHERE Title LIKE '%r'
+
+              </pre></code>
+              
+              <h4>Result</h4>
+            <code><pre>
+ First_Name | Last_Name | Title
+ -----------|-----------|------------
+ Alice      | Johnson   | Asst. Mgr
+ Raymond    | Barone    | Writer
+ Michael    | Scott     | Mgr
+ Joseph     | Robertson | Engineer
+            </pre></code>
+            <p>This returned Alice, Raymond, Michael, and Joseph</p>
+            </div>
+        </div>
+   
+        </section>
+        <section id="four">
+            <h2>Wrapping Up</h2>
+            <p>The logical operator <span class="highlight">LIKE</span> is a great way to quickly sift through the data. It gives you a way to loosely search for information you want.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Logan Honey: 2025 SQL Basics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
