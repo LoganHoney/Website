@@ -17,7 +17,7 @@
         <section id="two">
             <h2>LIKE</h2>
             <p>This is one of my favorite logical operators because of its versatility and power. Hopefully by the end of this, <span class = "highlight">LIKE</span> will be one of your favorites too! </p>
-            <p>This operator is used primarily with wildcards. Before we get too deep into it, there are two priamry wildcards: * and %. Star (*) is used primarily after SELECT but percent (%) is used with LIKE. The % is used as a beginning or ending wildcard. Let's look at a few examples.</p>
+            <p>This operator is used primarily with wildcards. Before we get too deep into it, there are two priamry wildcards:( * ) and ( % ). Star ( * ) is used primarily after SELECT but percent ( % ) is used with LIKE. Percent ( % ) is used as either a beginning, ending, or wrapping wildcard. Let's look at a few examples.</p>
         </section>
         
         <section id="three">
@@ -41,7 +41,7 @@
                 <div class = "definition2">
                     <h4><span class = "highlight">Begins With</span></h4>
                     <h4>Prompt</h4>
-                    <p>"Find all information about employees whose titles begin with the letter 'C'.</p>
+                    <p>Find all information about employees whose titles begin with the letter 'C'.</p>
                     <h4>Query</h4>
                     <code><pre>
 SELECT *
@@ -68,7 +68,7 @@ WHERE Title LIKE 'C%'
                 <div class = "definition2">
                 <h4><span class = "highlight">Contains</span></h4>
                 <h4>Prompt</h4>
-                <p>Find the first and last name of all employees whose first name contains 'a;. </p>
+                <p>Find the first and last name of all employees whose first name contains 'a'. </p>
                 <h4>Query</h4>
                  <code><pre>
 SELECT First_Name, Last_Name
