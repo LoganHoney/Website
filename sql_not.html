@@ -16,79 +16,110 @@
     <main>
         <section id="two">
             <h2>NOT</h2>
-            <p>We often know what data we're looking for. However, sometimes we know what data we're <span class = "highlight">NOT</span> looking for. This artile we will be looking at the logical operator </span class ="highlight">NOT</span>. </p>
-            <p>I like to think of in as an alternative to using multiple OR conditions. When using IN, what we're essentially doing is creating a list of value to compare against all rows of a specified column. Using IN instead of multiple OR statements cleans up the query which makes it easier to read and easier to troubleshoot.</p>
+            <p>We often know what data we're looking for. However, sometimes we know what data we're <span class = "highlight">NOT</span> looking for. </p>
+            <p>This operator is extremely useful as it allows us to exclude items from our qeury instead of naming everything we want. <span class="highlight">NOT</span> essentially returns the opposite of whatever criteria you specify and can be used in conjunction with other logical operators such as IN, LIKE, and BETWEEN. Let's look at some examples.</p>
         </section>
         
         <section id="three">
-            <h2>SQL Syntax: Using IN</h2>
+            <h2>SQL Syntax: Using NOT</h2>
             <h3>Example:</h3>
             <p><strong>Customers Table</strong></p>
             <pre>
-Customer_ID | First_Name | Last_Name | Cust_State
------------ | -----------|-----------|---------
-101         | Alice      | Johnson   | Arizona
-102         | Bob        | Smith     | Alaska
-103         | Raymond    | Barone    | New York
-104         | Michael    | Scott     | Pennsylvania
-105         | John       | Doe       | Florida
-106         | Bob        | Jacobson  | Oklahoma
+ First_Name | Last_Name | Cust_State
+ -----------|-----------|------------
+ Alice      | Johnson   | AZ
+ Bob        | Smith     | AK
+ Raymond    | Barone    | NY
+ Michael    | Scott     | PA
+ John       | Doe       | FL
+ Bob        | Jacobson  | OK
             </pre>
             
-            <!--IN-->
+            <!--NOT-->
             <div class = "grid">
                 <div class = "definition2">
-                    <h4><span class = "highlight">IN</span></h4>
-                    <p>Find the first and last names of all customers who live in Arizona, Florida, and New York</p>
+                    <h4><span class = "highlight">NOT</span></h4>
+                    <h4>Prompt</h4>
+                    <p>Find the first and last names of all customers who do not live in Arizona.</p>
                     <h4>Query</h4>
                     <code><pre>
-SELECT First_Name, Last_Name
+SELECT *
 FROM Customers
-WHERE Cust_State IN ('Arizona', 'Florida', 'New York')
+WHERE Cust_State NOT = 'AZ'
                     </pre></code>
                 
                     <h4>Result</h4>
                 
                     <code><pre>
-First_Name | Last_Name 
------------|-----------
-Alice      | Johnson   
-Raymond    | Barone     
-John       | Dow    
+First_Name | Last_Name | Cust_State
+-----------|-----------|------------
+Bob        | Smith     | AK
+Raymond    | Barone    | NY
+Michael    | Scott     | PA
+John       | Doe       | FL
+Bob        | Jacobson  | OK     
                 </pre></code>
+                <p>This query resulted in everyone except for Alice Johnson to return.</p>
                 </div>
                 
             </div>
             <p></p>
-			<!--OR-->
+			<!--NOT IN-->
            <div class = "grid">
                 <div class = "definition2">
-                <h4><span class = "highlight">OR</span></h4>
-                <p>The same results can be accomplished using OR, but notice how much longer this query is</p>
+                <h4><span class = "highlight">NOT IN</span></h4>
+                <h4>Prompt</h4>
+                <p>Find the first and last names of all customers who do not live in Arizona, New York, and Oklahoma</p>
                 <h4>Query</h4>
                  <code><pre>
-SELECT First_Name, Last_Name
+SELECT *
 FROM Customers
-WHERE Cust_State = 'Arizona'
-   OR Cust_State = 'Florida'
-   OR Cust_State = 'New York'
+WHERE Cust_State NOT IN ('AZ','FL','OK')
 
                   </pre></code>
 				  
                   <h4>Result</h4>
                 <code><pre>
-First_Name | Last_Name 
------------|-----------
-Alice      | Johnson   
-Raymond    | Barone     
-John       | Dow   
+First_Name | Last_Name | Cust_State
+-----------|-----------|------------
+Bob        | Smith     | AK
+Raymond    | Barone    | NY
+Michael    | Scott     | PA
                 </pre></code>
+                <p>This query excluded Alice Johnson, Raymond Barone, and Bob Jacobson from the result set.</p>
                 </div>
             </div>
+
+            <!--NOT IN-->
+           <div class = "grid">
+            <div class = "definition2">
+            <h4><span class = "highlight">NOT LIKE</span></h4>
+            <h4>Prompt</h4>
+            <p>Find the first and last names of all customers who's first name does not start with the letter B.</p>
+            <h4>Query</h4>
+             <code><pre>
+SELECT *
+FROM Customers
+WHERE First_Name NOT LIKE 'B%'
+
+              </pre></code>
+              
+              <h4>Result</h4>
+            <code><pre>
+ First_Name | Last_Name | Cust_State
+ -----------|-----------|------------
+ Raymond    | Barone    | NY
+ Michael    | Scott     | PA
+ John       | Doe       | FL
+            </pre></code>
+            <p>This query resulted in everyone except for the Bobs to return.</p>
+            </div>
+        </div>
+   
         </section>
         <section id="four">
             <h2>Wrapping Up</h2>
-            <p>The logical operator <span class="highlight">IN</span> is a powerful tool to simplify complex conditions and make our queries easier to read and troubleshoot. It is a must have tool that every analyst should know.</p>
+            <p>The logical operator <span class="highlight">NOT</span> is a great way to quickly sift through the data. Using it ensures that unwanted data is excluded from the result set.</p>
         </section>
     </main>
 
