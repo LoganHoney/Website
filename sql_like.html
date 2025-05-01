@@ -115,6 +115,30 @@ WHERE Title LIKE '%r'
             <p>This returned Alice, Raymond, Michael, and Joseph</p>
             </div>
         </div>
+        
+                <div class = "grid">
+                <div class = "definition2">
+                    <h4><span class = "highlight">LIKE Using _</span></h4>
+                    <h4>Prompt</h4>
+                    <p>Find all information about employees whose second letter of their firstname is 'o'.</p>
+                    <h4>Query</h4>
+                    <code><pre>
+SELECT *
+FROM Employee
+WHERE First_Name LIKE '_o%'
+                    </pre></code>
+                
+                    <h4>Result</h4>
+                
+                    <code><pre>
+ First_Name | Last_Name | Title
+ -----------|-----------|------------
+ Bob        | Smith     | Clerk
+ John       | Doe       | Chef
+  
+                </pre></code>
+                <p>This returned Bob and John. </p>
+                </div>
    
         </section>
         <section id="four">
