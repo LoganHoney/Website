@@ -17,7 +17,7 @@
         <section id="two">
             <h2>LIKE</h2>
             <p>This is one of my favorite logical operators because of its versatility and power. Hopefully by the end of this, <span class = "highlight">LIKE</span> will be one of your favorites too! </p>
-            <p>This operator is used primarily with wildcards. Before we get too deep into it, there are two priamry wildcards:(*) and (%). Star (*) is used primarily after SELECT but percent (%) is used with LIKE. Percent (%) is used as either a beginning, ending, or wrapping wildcard. Let's look at a few examples.</p>
+            <p>This operator is used primarily with wildcards. Before we get too deep into it, there are two primary wildcards used with the <span class = "highlight">LIKE</span> operator: the underscore (_) and the percent sign (%). The underscore (_) allows for the substitution of a single character in a specific position, while the percent sign (%) allows for the substitution of any number of characters, including none. Underscore is used less in my experience so our focus will be using <span class = "highlight">LIKE</span> with percent. Percent (%) can be used as either a beginning, ending, or wrapping wildcard. Let's look at a few examples.</p>
         </section>
         
         <section id="three">
@@ -85,7 +85,7 @@ WHERE First_Name LIKE '%a%'
  Raymond    | Barone    
  Michael    | Scott     
                 </pre></code>
-                <p>This returned Alice, Raymond, and Michael. (Notice the placement of the %'s, we needed to wrap 'a' so that if it appeared anywhere in the <code>First_Name</code>, it was returned.</p>
+                <p>This returned Alice, Raymond, and Michael. (Notice the placement of the %'s, we needed to wrap 'a' so that if it appeared in any row of the <code>First_Name</code> column, it was returned.</p>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@ WHERE Title LIKE '%r'
         </section>
         <section id="four">
             <h2>Wrapping Up</h2>
-            <p>The logical operator <span class="highlight">LIKE</span> is a great way to quickly sift through the data. It gives you a way to loosely search for information you want.</p>
+            <p>The logical operator <span class="highlight">LIKE</span> is powerful as it allows you to searxh portions of your data without needing to parse it. In a sense, the LIKE operator processes the data during a search but returns a complete set of results that match the specified pattern.</p>
         </section>
     </main>
 
