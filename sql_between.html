@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL: Logical Operator BETWEEN</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>SQL: Logical Operators</h1>
+        <h2 class="highlight">BETWEEN</h2>
+    </header>
+
+    <main>
+        <section id="two">
+            <h2>LIKE</h2>
+            <p>Ah, BETWEEN—the SQL operator that’s like a bouncer at a club, deciding who gets in and who’s left out. It’s the ultimate gatekeeper, saying, 'You can come in if you’re between these two numbers, but if you’re outside this exclusive range? Sorry, buddy, you’re not on the list!' Whether you’re sifting through prices, dates, or names, BETWEEN is here to help you draw arbitrary lines in the sand, because who doesn’t love a good range? </p>
+            <p>The <span class = "highlight">BETWEEN</span> operator in SQL is used to filter the result set within a certain range. It is commonly used in the WHERE clause to specify a range of values for a column. The <span class = "highlight">BETWEEN</span> operator is inclusive, meaning it includes the boundary values specified in the range.</p>
+        </section>
+        
+        <section id="three">
+            <h2>SQL Syntax: Using BETWEEN</h2>
+            <h3>Example:</h3>
+            <p><strong>Employee Table</strong></p>
+            <pre>
+ID | F_Name  | L_Name  | Salary  
+---| --------|---------|--------
+ 1 | Alice   | Johnson | 70,000 
+ 2 | Bob     | Smith   | 35,000 
+ 3 | Raymond | Barone  | 65,000 
+ 4 | Michael | Scott   | 90,000 
+ 5 | John    | Doe     | 52,000 
+ 6 | Bill    | Jacobs  | 38,000 
+ 7 | Joseph  | Roberts | 85,000 
+            </pre>
+            <p>In the following examples pay attention to the placement of '%'. In SQL, string values must be enclosed in quotes when searching.</p>
+            <!--NOT-->
+            <div class = "grid">
+                <div class = "definition2">
+                    <h4><span class = "highlight">Numeric Ranges</span></h4>
+                    <h4>Prompt</h4>
+                    <p>Find all employees with a salary between $40,000 and $80,000:</p>
+                    <h4>Query</h4>
+                    <code><pre>
+SELECT * 
+FROM Employees 
+WHERE Salary BETWEEN 40000 AND 80000;
+
+                    </pre></code>
+                
+                    <h4>Result</h4>
+                
+                    <code><pre>
+ID | F_Name  | L_Name  | Salary  
+---| --------|---------|--------
+ 1 | Alice   | Johnson | 70,000 
+ 3 | Raymond | Barone  | 65,000 
+ 5 | John    | Doe     | 52,000 
+                </pre></code>
+                <p>This returned Alice, Raymond, and Bill as their salaries are within the specified range. </p>
+                </div>
+                
+            </div>
+            <p></p>
+			<!--LIKE SANDWICH-->
+           <div class = "grid">
+                <div class = "definition2">
+                <h4><span class = "highlight">Endpoints Included</span></h4>
+                <h4>Prompt</h4>
+                <p>Find all employees with IDs between 2 and 5</p>
+                <h4>Query</h4>
+                 <code><pre>
+SELECT * 
+FROM Employees 
+WHERE ID BETWEEN 2 AND 5;
+
+
+                  </pre></code>
+				  
+                  <h4>Result</h4>
+                <code><pre>
+ID | F_Name  | L_Name  | Salary  
+---| --------|---------|--------
+ 2 | Bob     | Smith   | 35,000 
+ 3 | Raymond | Barone  | 65,000 
+ 4 | Michael | Scott   | 90,000 
+ 5 | John    | Doe     | 52,000 
+                </pre></code>
+                <p>This returned Bob, Raymond, Michael, and John. <span class = "highlight">BETWEEN</span> is inclusive of it's end points so ID's 2 and 5 are included.</p>
+                </div>
+            </div>
+
+            <!--NOT IN-->
+           <div class = "grid">
+            <div class = "definition2">
+            <h4><span class = "highlight">String Ranges</span></h4>
+            <h4>Prompt</h4>
+            <p>Find employees with last names between 'Barone' and 'Roberts'</p>
+            <h4>Query</h4>
+             <code><pre>
+SELECT * 
+FROM Employees 
+WHERE L_Name BETWEEN 'Barone' AND 'Roberts';
+
+
+              </pre></code>
+              
+              <h4>Result</h4>
+            <code><pre>
+ID | F_Name  | L_Name  | Salary  
+---| --------|---------|--------
+ 1 | Alice   | Johnson | 70,000 
+ 3 | Raymond | Barone  | 65,000 
+ 5 | John    | Doe     | 52,000 
+ 6 | Bill    | Jacobs  | 38,000 
+ 7 | Joseph  | Roberts | 85,000 
+            </pre></code>
+            <p>This returned Alice, Raymond, John, Bill , and Joseph. It excluded Michael Scott and Bob Smith as their last names begin with 'S'.</p>
+            </div>
+        </div>
+        
+                <div class = "grid">
+                <div class = "definition2">
+                    <h4><span class = "highlight">LIKE Using _</span></h4>
+                    <p>Let's change the table slightly to perform date ranges:</p>
+                    <code><pre>
+F_Name  | L_Name  | DOB  
+--------|---------|-----------
+Alice   | Johnson | 1990-02-20 
+Raymond | Barone  | 1987-08-12 
+John    | Doe     | 2000-06-08
+Bill    | Jacobs  | 1995-10-15 
+Joseph  | Roberts | 1981-11-23
+                    </pre></code>
+                    <h4>Prompt</h4>
+                    <p>Find all employees born between January 1, 1980, and December 31, 1990</p>
+                    <h4>Query</h4>
+                    <code><pre>
+SELECT * 
+FROM Employees 
+WHERE DOB BETWEEN '1980-01-01' 
+              AND '1990-12-31';
+                    </pre></code>
+                
+                    <h4>Result</h4>
+                
+F_Name  | L_Name  | DOB  
+--------|---------|-----------
+Alice   | Johnson | 1990-02-20 
+Raymond | Barone  | 1987-08-12 
+Joseph  | Roberts | 1981-11-23
+  
+                </pre></code>
+                <p>This returned Alice, Raymond, and Joseph </p>
+                </div>
+   
+        </section>
+        <section id="four">
+            <h2>Wrapping Up</h2>
+            <p>The logical operator <span class="highlight">LIKE</span> is powerful as it allows you to searxh portions of your data without needing to parse it. In a sense, the LIKE operator processes the data during a search but returns a complete set of results that match the specified pattern.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Logan Honey: 2025 SQL Basics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
