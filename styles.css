@@ -1,14 +1,12 @@
-html,body{
-  
-  font-family: Arial, sans-serif;
-  margin:0;
-  overflow-x:hidden;
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-
-header{
-    background-color: #000000; /* Header background color */
-    color: #FFFFFF; /* Header text color */
+header {
+    background-color: #1a1a2e; /* Updated Header background color */
+    color: #f5f5f5; /* Updated Header text color */
     text-align: center; /* Center text */
     height: 100vh;
     display: flex; /* Use Flexbox */
@@ -17,156 +15,121 @@ header{
     justify-content: center; /* Center vertically */
 }
 
-.About{
+.About {
     text-align: center;
     margin: 20px;
 }
-    
-ul {
-	list-style-type: none;
-}
 
+ul {
+    list-style-type: none;
+}
 
 a {
-	text-decoration:none;
+    text-decoration: none;
 }
 
-
 img {
-	border-radius: 25px;
-	padding: 20px;
-	
+    border-radius: 25px;
+    padding: 20px;
 }
 
 p {
-	font-size: 15px;
-	display: block;
+    font-size: 15px;
+    display: block;
 }
-	
-main{
-	margin:20;
+
+main {
+    margin: 20;
 }
 
 .highlight {
-    color:#03aee5;
-    font-weight:bold;
+    color: #03aee5; /* Keep highlight color */
+    font-weight: bold;
 }
 
-
-
-.Quote{
+.Quote {
     text-indent: 20px;
     text-align: center;
     width: 80%;
     margin: 10px auto;
-    border: 1px solid #000000;
+    border: 1px solid #16213e; /* Updated border color */
     border-radius: 15px;
     padding: 20px;
-  
+    background-color: #1a1a2e; /* Match background */
+    color: #f5f5f5; /* Updated text color */
 }
-
 
 .Headshot {
-	    width: 300px; /* Set the width of the image */
-	    height: auto; /* Set the height of the image */
-	    border-radius: 50%; /* Make the image round */
-	    object-fit: cover; /* Ensure the image covers the area without distortion */
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Set the height of the image */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
-	
 #education ul {
     list-style: none;
-
 }
+
 #education ul li a {
     text-decoration: none;
-    color: black;
+    color: #f5f5f5; /* Updated link color */
 }
 
-#education ul li a:hover { /* hover for YT links*/
-    font-weight:bold;
+#education ul li a:hover { /* hover for YT links */
+    font-weight: bold;
+    color: #03aee5; /* Change hover color to primary */
 }
+
 #contact {
-     margin: 20px;
+    margin: 20px;
 }
 
 #contact p a {
     text-decoration: none;
-    color:#000000;
+    color: #f5f5f5; /* Updated link color */
     font-weight: bold;
 }
 
 footer {
     text-align: center; /* Center footer text */
     padding: 10px; /* Padding for footer */
-    background-color: #000000; /* Footer background color */
-    color: white; /* Footer text color */
+    background-color: #1a1a2e; /* Updated Footer background color */
+    color: #f5f5f5; /* Updated Footer text color */
     position: relative; /* Position relative for footer */
     bottom: 0; /* Align to the bottom */
-    
 }
-/*OPTIMIZING FOR MOBILE*/
+
+/* OPTIMIZING FOR MOBILE */
 @media (max-width: 768px) {
-	.TwoColumn{
-		display:none
-	}
-	.Headshot {
-	    width: 150px; /* Set the width of the image */
-	    height: auto; /* Set the height of the image */
-	    border-radius: 50%; /* Make the image round */
-	    object-fit: cover; /* Ensure the image covers the area without distortion */
-	}
-	
+    .TwoColumn {
+        display: none;
+    }
+    .Headshot {
+        width: 150px; /* Set the width of the image */
+        height: auto; /* Set the height of the image */
+        border-radius: 50%; /* Make the image round */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+    }
 }
+
 @media (min-width: 768px) {
-	.Container{
-		display:none
-	}
+    .Container {
+        display: none;
+    }
 }
 
-/* Styleing for SQL Series */
-
-#one  {
-    border: 1px solid #000000; /* black border */
+/* Styling for SQL Series */
+#one, #two, #three, #four {
+    border: 1px solid #16213e; /* Updated border color */
     width: 80%;
-    background-color:#000000;
-    color:#FFFFFF;
+    background-color: #1a1a2e; /* Updated background color */
+    color: #f5f5f5; /* Updated text color */
     border-radius: 20px; /* Rounded corners */
     padding: 20px; /* Padding inside sections */
     margin: 10px auto; /* Space between sections */
 }
 
-#two {
-    border: 1px solid #000000; /* black border */
-    width: 80%;
-    background-color:#000000;
-    color:#FFFFFF;
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px; /* Padding inside sections */
-    margin: 10px auto; /* Space between sections */
-}
-
-#three  {
-    border: 1px solid #000000; /* black border */
-    width: 80%;
-    background-color:#000000;
-    color:#FFFFFF;
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px; /* Padding inside sections */
-    margin: 10px auto; /* Space between sections */
-}
-
-#four  {
-    border: 1px solid #000000; /* black border */
-    width: 80%;
-    background-color:#000000;
-    color:#FFFFFF;
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px; /* Padding inside sections */
-    margin: 10px auto; /* Space between sections */
-}
-
-/* Styling for grid*/
+/* Styling for grid */
 .grid {
     display: flex;
     justify-content: space-between;
@@ -177,7 +140,6 @@ footer {
     justify-content: space-between;
     flex-direction: column;
 }
-
 
 .definition, .example {
     width: 47%; /* Adjust width as needed */
@@ -193,15 +155,13 @@ footer {
     border-radius: 15px;
 }
 
-/*highlight*/
+/* highlight */
 .highlighty {
-    color:#ebd834;
-    font-weight:bold;
+    color: #ff6f61; /* Updated highlight color */
+    font-weight: bold;
 }
 
 code {
-    
     font-weight: bolder;
-    color: grey
-
+    color: grey;
 }
